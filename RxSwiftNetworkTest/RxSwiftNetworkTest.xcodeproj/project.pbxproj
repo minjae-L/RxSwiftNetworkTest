@@ -21,7 +21,6 @@
 		B52DE1992C3283BD00450C00 /* RxSwiftNetworkTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52DE1982C3283BD00450C00 /* RxSwiftNetworkTestUITestsLaunchTests.swift */; };
 		B52DE1A62C32873700450C00 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52DE1A52C32873700450C00 /* TableViewCell.swift */; };
 		B52DE1A82C328E8800450C00 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52DE1A72C328E8800450C00 /* DataModel.swift */; };
-		B52DE1AA2C32901A00450C00 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52DE1A92C32901A00450C00 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +64,6 @@
 		B52DE1982C3283BD00450C00 /* RxSwiftNetworkTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftNetworkTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B52DE1A52C32873700450C00 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		B52DE1A72C328E8800450C00 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		B52DE1A92C32901A00450C00 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		D69120C529A7AC5648AF3B66 /* Pods_RxSwiftNetworkTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftNetworkTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -154,7 +152,6 @@
 				B52DE1832C3283BD00450C00 /* Info.plist */,
 				B52DE1A52C32873700450C00 /* TableViewCell.swift */,
 				B52DE1A72C328E8800450C00 /* DataModel.swift */,
-				B52DE1A92C32901A00450C00 /* ViewModel.swift */,
 			);
 			path = RxSwiftNetworkTest;
 			sourceTree = "<group>";
@@ -419,7 +416,6 @@
 				B52DE17A2C3283B900450C00 /* ViewController.swift in Sources */,
 				B52DE1A62C32873700450C00 /* TableViewCell.swift in Sources */,
 				B52DE1762C3283B900450C00 /* AppDelegate.swift in Sources */,
-				B52DE1AA2C32901A00450C00 /* ViewModel.swift in Sources */,
 				B52DE1782C3283B900450C00 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
