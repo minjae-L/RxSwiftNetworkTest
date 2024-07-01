@@ -12,17 +12,28 @@ import Kingfisher
 
 class ViewController: UIViewController {
 
-    let urlString = "minjae-L/RandomStudy"
+    let urlString = "minjae-L/RxSwiftNetworkTest"
     let disposeBag = DisposeBag()
     private let events = BehaviorRelay<[Events]>(value: [])
     
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchEvents(repo: urlString)
-
+        self.tableView.refreshControl = UIRefreshControl()
+        
+        tableView.refreshControl?.backgroundColor = UIColor(white: 0.98, alpha: 1.0)
+        tableView.refreshControl?.tintColor = UIColor.darkGray
+        tableView.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        tableView.refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        
+        refresh()
     }
-    func fetchEvents(repo: String) {
+    @objc private func refresh() {
+        fetchEvents(repo: urlString)
+    }
+        
+    private func fetchEvents(repo: String) {
         DispatchQueue.global(qos: .default).async { [weak self] in
             let response = Observable.from([repo])
                 .map { urlString -> URL in
@@ -52,16 +63,17 @@ class ViewController: UIViewController {
         }
     }
     private func processEvents(newEvents: [Events]) {
-        var updatedEvents = events.value + newEvents
+        var updatedEvents = newEvents
         if updatedEvents.count > 50 {
             updatedEvents = [Events](updatedEvents.prefix(upTo: 50))
         }
-        print(updatedEvents)
         events.accept(updatedEvents)
         
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            self.tableView.refreshControl?.endRefreshing()
         }
+        
     }
     private func convertTimeDateFormatter(string: String) -> String {
         let dateFormatter = DateFormatter()
