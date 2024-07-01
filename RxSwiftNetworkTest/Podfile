@@ -9,6 +9,7 @@ target 'RxSwiftNetworkTest' do
 pod 'RxSwift'
 pod 'RxCocoa'
 pod 'Alamofire'
+pod 'Kingfisher'
   target 'RxSwiftNetworkTestTests' do
     inherit! :search_paths
     # Pods for testing
