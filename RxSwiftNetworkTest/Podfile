@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'RxSwiftNetworkTest' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for RxSwiftNetworkTest
+pod 'RxSwift'
+pod 'RxCocoa'
+  target 'RxSwiftNetworkTestTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'RxSwiftNetworkTestUITests' do
+    # Pods for testing
+  end
+
+end

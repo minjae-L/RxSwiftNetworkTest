@@ -1,0 +1,6 @@
+framework module Pods_RxSwiftNetworkTestTests {
+  umbrella header "Pods-RxSwiftNetworkTestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
