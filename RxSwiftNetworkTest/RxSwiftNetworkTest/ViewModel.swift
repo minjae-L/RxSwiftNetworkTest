@@ -13,7 +13,7 @@ class ViewModel {
     var events = BehaviorRelay<[Events]>(value: [])
     let disposeBag = DisposeBag()
     
-    var refreshLoading = BehaviorRelay<Bool>(value: false)
+    var refreshLoading = PublishRelay<Bool>()
     
     init() {
         let urlString = "minjae-L/RxSwiftNetworkTest"
